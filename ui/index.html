@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'" />
+    <title>Kew</title>
+    <link rel="stylesheet" href="/styles.css" />
+    <script type="module" src="/main.ts" defer></script>
+  </head>
+  <body>
+    <main>
+      <p class="eyebrow">Live queue monitor</p>
+      <h1>Kew</h1>
+      <section aria-live="polite">
+        <strong id="wait">Waiting for video…</strong>
+        <span id="people">Start the Kew detector to begin.</span>
+      </section>
+      <p id="status" class="status">Connecting…</p>
+    </main>
+  </body>
+</html>

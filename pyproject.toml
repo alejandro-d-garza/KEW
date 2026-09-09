@@ -1,0 +1,31 @@
+[project]
+name = "kew"
+version = "0.2.0"
+description = "Live human detection and queue wait estimation"
+requires-python = ">=3.11"
+dependencies = [
+  "opencv-python>=4.8",
+  "PyYAML>=6.0",
+  "ultralytics>=8.0",
+]
+
+[project.scripts]
+kew = "kew.app:main"
+
+[build-system]
+requires = ["setuptools>=77"]
+build-backend = "setuptools.build_meta"
+
+[project.optional-dependencies]
+dev = ["pytest>=8", "ruff>=0.6"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]
+
+[tool.setuptools.packages.find]
+where = ["src"]

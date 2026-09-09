@@ -1,1 +1,0 @@
-FRAMERATE = 5

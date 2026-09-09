@@ -1,56 +1,59 @@
+# Operating systems and editors
 .DS_Store
-.env
-.gclient_done
-**/.npmrc
-.tags*
-.vs/
+Thumbs.db
+.idea/
 .vscode/
-*.log
-*.avi
-*.pyc
-*.sln
+.vs/
 *.swp
-*.VC.db
-*.VC.VC.opendb
-*.vcxproj
-*.vcxproj.filters
-*.vcxproj.user
-*.xcodeproj
-/.idea/
-/dist/
-node_modules/
-SHASUMS256.txt
-**/package-lock.json
-compile_commands.json
+*~
+
+# Secrets and local environment overrides
+.env
+.env.*
+!.env.example
 .envrc
+*.local
 
-# npm package
-/npm/dist
-/npm/path.txt
-/npm/checksums.json
+# Python environments, caches, builds, and reports
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+.coverage
+.coverage.*
+coverage.xml
+htmlcov/
+.tox/
+.nox/
+build/
+site/
 
-.npmrc
+# JavaScript dependencies and Vite output
+node_modules/
+dist/
+*.tsbuildinfo
 
-# Generated API definitions
-electron-api.json
-electron.d.ts
+# Rust and Tauri generated output
+src-tauri/target/
+src-tauri/gen/
 
-# Spec hash calculation
-spec/.hash
+# Kew runtime and model-training output
+runtime/*.json
+runs/
+*.avi
+*.mp4
 
-# Eslint Cache
-.eslintcache*
+# Model weights belong in assets/models when intentionally versioned.
+*.pt
+!assets/models/*.pt
 
-# Generated native addon files
-/spec/fixtures/native-addon/echo/build/
+# Logs and native tooling output
+*.log
+compile_commands.json
 
-# If someone runs tsc this is where stuff will end up
-ts-gen
-
-# Used to accelerate CI builds
-.depshash
-
-# Used to accelerate builds after sync
-patches/mtime-cache.json
-
-spec/fixtures/logo.pngs
+# Local AI-agent instructions
+AGENTS.md

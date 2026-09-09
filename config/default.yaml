@@ -1,0 +1,18 @@
+detector:
+  model: assets/models/best.pt
+  confidence_threshold: 0.65
+  frame_rate: 10
+
+tracker:
+  max_distance: 80
+  max_missed_frames: 5
+
+analytics:
+  seconds_per_person: 60
+
+output:
+  state_file: runtime/queue_state.json
+
+# An empty polygon treats the entire frame as the queue. Coordinates are pixels.
+queue_region:
+  vertices: []

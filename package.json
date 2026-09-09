@@ -1,14 +1,22 @@
 {
-  "name": "queue-time-app",
-  "version": "1.0.0",
-  "description": "An app to calculate and display estimated queue time",
-  "main": "front_end/main.js",
+  "name": "kew-desktop",
+  "version": "0.2.0",
+  "private": true,
+  "description": "Tauri desktop interface for Kew",
+  "type": "module",
   "scripts": {
-    "start": "electron front_end/main.js"
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "check": "tsc --noEmit",
+    "tauri": "tauri"
   },
   "devDependencies": {
-    "electron": "^35.1.2"
+    "@tauri-apps/cli": "^2",
+    "typescript": "^5.7",
+    "vite": "^7"
   },
-  "author": "",
-  "license": "ISC"
+  "dependencies": {
+    "@tauri-apps/api": "^2"
+  },
+  "license": "MIT"
 }
